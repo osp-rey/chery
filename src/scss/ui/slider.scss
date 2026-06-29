@@ -1,0 +1,60 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.slider-pagination {
+  @include flex-center;
+  margin-top: 30px;
+  gap: 4px;
+
+  .swiper-pagination-bullet {
+    width: 48px;
+    height: 4px;
+    background-color: var(--dark);
+    opacity: 0.4;
+    border-radius: 0px;
+    cursor: pointer;
+
+    transition:
+      background-color 0.3s ease,
+      opacity 0.3s ease;
+
+    &.swiper-pagination-bullet-active {
+      background-color: var(--primary);
+      opacity: 1;
+    }
+    @include hover {
+      opacity: 1;
+    }
+
+    @include tablet {
+      width: 38px;
+      height: 3px;
+    }
+  }
+}
+
+.slider-scrollbar {
+  margin-top: 60px;
+  width: 100%;
+  height: 1px;
+  background-color: var(--dark);
+
+  @include laptop {
+    margin-top: 40px;
+  }
+  @include laptop-min {
+    margin-top: 30px;
+  }
+
+  .swiper-scrollbar-drag {
+    position: relative;
+    background-color: var(--primary);
+  
+    &::before {
+      position: absolute;
+      content: "";
+      inset: -1px 0px;
+      background-color: var(--primary);
+    }
+  }
+}

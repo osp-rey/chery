@@ -1,0 +1,63 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.btn-s {
+  --background: var(--black);
+  --border: var(--primary);
+  --color: white;
+  --background-h: var(--primary);
+  --border-h: var(--primary);
+  --color-h: white;
+
+  @include flex-center;
+  gap: 8px;
+  cursor: pointer;
+  width: fit-content;
+  outline: none;
+  padding: 15px 26px;
+  min-height: 56px;
+  border: 1px solid var(--border);
+  background-color: var(--background);
+
+  color: var(--color);
+  user-select: none;
+  font-size: 13px;
+  line-height: 108%;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease;
+
+  @include hover {
+    background-color: var(--background-h);
+    border-color: var(--border-h);
+    color: var(--color-h);
+  }
+  &._blur {
+    --border: white;
+    --background: rgba(255, 255, 255, 0.1);
+    --color: white;
+    --border-h: var(--primary);
+    --background-h: rgba(255, 255, 255, 0.1);
+    --color-h: white;
+
+    backdrop-filter: blur(4px);
+  }
+  &._outline {
+    --border: var(--dark);
+    --background: transparent;
+    --color: var(--dark);
+    --border-h: var(--primary);
+    --background-h: transparent;
+    --color-h: var(--primary);
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+}

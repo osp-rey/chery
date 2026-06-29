@@ -1,0 +1,62 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.s-adv {
+  padding: 24px 0px;
+  background-color: var(--ghost);
+
+  &__wrap {
+    display: flex;
+    justify-content: center;
+    gap: 75px;
+    row-gap: 25px;
+    flex-wrap: wrap;
+    @include laptop {
+      gap: 40px;
+    }
+    @include laptop-middle {
+      gap: 30px;
+    }
+    @include laptop-min {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+  &__item {
+    display: flex;
+    gap: 75px;
+    height: auto;
+    @include laptop {
+      gap: 40px;
+    }
+    @include laptop-middle {
+      gap: 30px;
+    }
+
+    &:not(:last-child) {
+      &::after {
+        display: block;
+        content: "";
+        width: 1px;
+        background-color: currentColor;
+        flex-shrink: 0;
+        height: 100%;
+
+        @include laptop-min {
+          display: none;
+        }
+      }
+    }
+    .item-name {
+      font-size: 36px;
+      line-height: 133%;
+      color: var(--primary);
+    }
+    .item-text {
+    }
+  }
+}
