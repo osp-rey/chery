@@ -1,0 +1,120 @@
+.card-car {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-car__gallery {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 1/0.65;
+  padding: 10px 24px;
+}
+
+.card-car__gallery img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.card-car__gallery-background {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  clip-path: polygon(100% 0%, 75% 100%, 0% 100%, 25% 0%);
+  overflow: hidden;
+  background-color: #e7e7e7;
+  padding-top: 10px;
+}
+
+.card-car__gallery-background .item-text {
+  padding: 6px 20px;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: white;
+  width: fit-content;
+  background-color: var(--primary);
+  clip-path: polygon(100% 0%, 95% 100%, 0% 100%, 5% 0%);
+  margin-left: 20%;
+}
+
+.card-car__title {
+  margin-top: 30px;
+  display: block;
+  width: fit-content;
+  transition: color 0.3s ease;
+}
+
+.card-car__content {
+  margin: 20px 0px 0px 0px;
+  color: var(--gray);
+  margin-top: 20px;
+}
+
+.card-car__price {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 30px;
+  gap: 20px;
+  row-gap: 15px;
+  flex-wrap: wrap;
+}
+
+.card-car__price .item-title {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.card-car__price .item-price {
+  font-size: 26px;
+  letter-spacing: 0.04em;
+}
+
+.card-car__buttons {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.card-car__btn {
+  width: 100%;
+  justify-content: space-between;
+}
+
+@media (max-width: 1365px) {
+  .card-car__price .item-price {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 767px) {
+  .card-car__title {
+    margin-top: 20px;
+  }
+
+  .card-car__price {
+    padding-top: 20px;
+  }
+
+  .card-car__buttons {
+    gap: 12px;
+  }
+}
+
+@media (any-hover: hover) {
+  .card-car__title:hover {
+    color: var(--primary);
+  }
+}
+
+@media (hover: none) {
+  .card-car__title:active {
+    color: var(--primary);
+  }
+}

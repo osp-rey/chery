@@ -31,6 +31,10 @@
   @include laptop-min {
     font-size: 32px;
   }
+
+  span {
+    color: var(--primary);
+  }
 }
 
 .l-title {
@@ -43,5 +47,22 @@
   }
   @include laptop-min {
     font-size: 28px;
+  }
+}
+
+.m-title {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 160%;
+  margin: 0;
+
+  @include laptop {
+    font-size: 26px;
+  }
+  @include laptop-min {
+    font-size: 22px;
+  }
+  @include tablet {
+    font-size: 20px;
   }
 }

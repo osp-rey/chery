@@ -1,0 +1,100 @@
+.s-credit__wrapper {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.s-credit__main {
+  flex: 0 1 635px;
+}
+
+.s-credit__content {
+  color: var(--gray);
+  margin-top: 25px;
+}
+
+.s-credit__form {
+  margin-top: 45px;
+}
+
+.s-credit__form .form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.s-credit__form .btn-s[type=submit],
+.s-credit__form .form-check {
+  width: 100%;
+  grid-column: 2 span;
+}
+
+.s-credit__info {
+  flex: 0 1 810px;
+}
+
+.s-credit__info-content {
+  color: var(--gray);
+  margin-top: 20px;
+}
+
+.s-credit__info-banks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 45px;
+}
+
+.s-credit__info-bank {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: 1px solid rgba(62, 58, 57, 0.5);
+  background-color: var(--ghost);
+  width: 100%;
+  min-height: 115px;
+}
+
+@media (max-width: 1199px) {
+  .s-credit__wrapper {
+    flex-wrap: wrap;
+  }
+
+  .s-credit__main {
+    flex: auto;
+    width: 100%;
+  }
+
+  .s-credit__info {
+    flex: auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 991px) {
+  .s-credit__info-banks {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .s-credit__form .form-grid {
+    gap: 16px;
+  }
+
+  .s-credit__form .input-control {
+    grid-column: 2 span;
+  }
+
+  .s-credit__info-banks {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 575px) {
+  .s-credit__info-banks {
+    grid-template-columns: 1fr;
+  }
+}

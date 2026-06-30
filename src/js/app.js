@@ -1,8 +1,13 @@
 import burger from "./functions/burger.js";
 import buttonsNote from "./functions/buttonsNote.js";
+import carChange from "./functions/carChange.js";
 import changeModaltitle from "./functions/changeModalTitle.js";
+import handlerSelect from "./functions/handlerSelect.js";
 import inputmask from "./functions/inputmask.js";
+import map from "./functions/map.js";
+import mediaAdaptive from "./functions/mediaAdaptive.js";
 import sliders from "./functions/sliders.js";
+import spoller from "./functions/spoller.js";
 import tab from "./functions/tab.js";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -12,6 +17,11 @@ document.addEventListener("DOMContentLoaded", () => {
   buttonsNote();
   tab();
   inputmask();
+  handlerSelect();
+  map();
+  carChange();
+  spoller();
+  mediaAdaptive();
 
   Fancybox.bind("[data-fancybox]", {
     closeButton: false,

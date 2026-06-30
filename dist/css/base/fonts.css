@@ -1,0 +1,15 @@
+@font-face {
+  font-family: Tenet;
+  font-display: swap;
+  src: url("../files/fonts/Tenet.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Tenet;
+  font-display: swap;
+  src: url("../files/fonts/Tenet-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}

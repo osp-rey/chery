@@ -1,0 +1,221 @@
+.input-control {
+  width: 100%;
+}
+
+.input {
+  --background: transparent;
+  --border: var(--dark);
+  --color: var(--dark);
+  --background-a: transparent;
+  --border-a: var(--primary);
+  --color-a: var(--dark);
+  width: 100%;
+  line-height: 108%;
+  padding: 15px 20px;
+  outline: none;
+  border-radius: 0px;
+  border: 1px solid var(--border);
+  background-color: var(--background);
+  display: grid;
+  font-size: 16px;
+  color: var(--color);
+  transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.input:focus {
+  border-color: var(--border-a);
+  background-color: var(--background-a);
+  color: var(---color-a);
+}
+
+.input::placeholder {
+  color: inherit;
+  opacity: 0.7;
+}
+
+.input._outline-white {
+  --background: transparent;
+  --border: white;
+  --color: white;
+  --background-a: transparent;
+  --border-a: var(--primary);
+  --color-a: white;
+}
+
+.form-check {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.check-wrapper {
+  --url: url("../img/check.svg");
+  position: relative;
+}
+
+.check-wrapper._white {
+  --url: url("../img/check-white.svg");
+}
+
+.check-wrapper._white .wpcf7-list-item-label {
+  --border: white;
+  --color: rgba(255, 255, 255, 0.75);
+  --color-l: var(--primary);
+}
+
+.check-wrapper input[type=checkbox] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+}
+
+.check-wrapper input[type=checkbox]:checked + .wpcf7-list-item-label::before {
+  background: var(--url) center/12px auto no-repeat;
+  background-color: var(--background);
+}
+
+.check-wrapper .wpcf7-list-item-label {
+  --border: var(--black);
+  --color: rgba(153, 142, 131, 0.75);
+  --color-l: var(--dark);
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 15px;
+  cursor: pointer;
+  font-size: 15px;
+  color: var(--color);
+}
+
+.check-wrapper .wpcf7-list-item-label a {
+  color: var(--color-l);
+}
+
+.check-wrapper .wpcf7-list-item-label::before {
+  display: block;
+  content: "";
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--border);
+}
+
+.select {
+  position: relative;
+}
+
+.select._open .select-btn .arrow {
+  transform: rotate(180deg);
+}
+
+.select._open .select-body {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.select-btn {
+  --color: var(--dark);
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: var(--color);
+}
+
+.select-btn._white {
+  --color: white;
+}
+
+.select-btn .input {
+  pointer-events: none;
+  padding-right: 40px;
+}
+
+.select-btn .arrow {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  right: 20px;
+  transition: transform 0.3s ease;
+}
+
+.select-body {
+  --border: var(--dark);
+  --background: white;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--background);
+  border: 1px solid var(--border);
+  max-height: 220px;
+  overflow-y: auto;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  z-index: 10;
+  transition: transform 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.select-body::-webkit-scrollbar {
+  width: 2px;
+}
+
+.select-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.select-body::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+}
+
+.select-item {
+  --border: var(--dark);
+  --background: transparent;
+  --background-h: var(--ghost);
+  --color: var(--dark);
+  cursor: pointer;
+  user-select: none;
+  padding: 10px 12px;
+  color: var(--color);
+  transition: background-color 0.3s ease;
+}
+
+.select-item:not(:last-child) {
+  border-bottom: 1px solid var(--border);
+}
+
+@media (max-width: 767px) {
+  .check-wrapper .wpcf7-list-item-label {
+    font-size: 14px;
+  }
+
+  .check-wrapper .wpcf7-list-item-label::before {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (any-hover: hover) {
+  .check-wrapper .wpcf7-list-item-label a:hover {
+    text-decoration: underline;
+  }
+
+  .select-item:hover {
+    background-color: var(--background-h);
+  }
+}
+
+@media (hover: none) {
+  .check-wrapper .wpcf7-list-item-label a:active {
+    text-decoration: underline;
+  }
+
+  .select-item:active {
+    background-color: var(--background-h);
+  }
+}

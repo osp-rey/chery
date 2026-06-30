@@ -1,0 +1,62 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.s-connect {
+  position: relative;
+  color: white;
+  z-index: 1;
+
+  &::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background: linear-gradient(
+      270deg,
+      rgba(255, 255, 255, 0) 27.93%,
+      rgba(26, 26, 26, 0.6) 41.09%,
+      rgba(27, 27, 27, 0.8) 49.98%,
+      rgba(27, 27, 27, 0.8) 60.24%,
+      rgba(38, 38, 38, 0.8) 100%
+    );
+    z-index: -1;
+
+    @include laptop-min {
+      background: rgba(26, 26, 26, 0.6);
+    }
+  }
+  &__info {
+    max-width: 750px;
+  }
+  &__content {
+    margin-top: 30px;
+    max-width: 600px;
+  }
+  &__form {
+    margin-top: 60px;
+    @include laptop-middle {
+      margin-top: 40px;
+    }
+    @include laptop-min {
+      margin-top: 30px;
+    }
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      @include tablet {
+        gap: 16px;
+      }
+
+      .input-control {
+        @include tablet-min {
+          grid-column: 2 span;
+        }
+      }
+      .btn-s[type="submit"],
+      .form-check {
+        width: 100%;
+        grid-column: 2 span;
+      }
+    }
+  }
+}

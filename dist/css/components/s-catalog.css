@@ -1,0 +1,243 @@
+.s-catalog {
+  overflow: hidden;
+  padding-bottom: 2px;
+}
+
+.s-catalog__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 25px;
+}
+
+.s-catalog__nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.s-catalog__nav-title {
+  color: var(--gray);
+}
+
+.s-catalog__nav-wrap {
+  display: flex;
+  gap: 20px;
+}
+
+.s-catalog__nav-btn {
+  --background: transparent;
+  --border: var(--dark);
+  --color: var(--dark);
+  --background-h: var(--dark);
+  --border-h: var(--primary);
+  --color-h: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 10px 15px;
+  background-color: var(--background);
+  border: 1px solid var(--border);
+  color: var(--color);
+  text-align: center;
+  user-select: none;
+  transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.s-catalog__nav-btn._active {
+  pointer-events: none;
+  background-color: var(--background-h);
+  color: var(--color-h);
+  border-color: var(--border-h);
+}
+
+.s-catalog__nav-btn._active .logo-dark {
+  display: none;
+}
+
+.s-catalog__nav-btn._active .logo-white {
+  display: block;
+}
+
+.s-catalog__nav-btn img {
+  transition: opacity 0.3s ease;
+}
+
+.s-catalog__nav-btn .logo-white {
+  opacity: 1;
+  display: none;
+}
+
+.s-catalog__tab-head {
+  margin-bottom: 60px;
+}
+
+.s-catalog__toggle {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  row-gap: 16px;
+}
+
+.s-catalog__toggle-btn {
+  position: relative;
+  display: flex;
+  cursor: pointer;
+  gap: 20px;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.s-catalog__toggle-btn::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 100%;
+  height: 1px;
+  bottom: 0;
+  background-color: var(--primary);
+  transition: right 0.3s ease;
+}
+
+.s-catalog__toggle-btn:not(:last-child)::after {
+  content: "";
+  height: 100%;
+  width: 1px;
+  background-color: currentColor;
+  flex-shrink: 0;
+}
+
+.s-catalog__toggle-btn._active {
+  pointer-events: none;
+}
+
+.s-catalog__toggle-btn._active::before {
+  right: 20px;
+}
+
+.s-catalog__slider .swiper-slide {
+  height: auto !important;
+  box-sizing: border-box;
+}
+
+.s-catalog__slider .swiper-slide .card-car {
+  height: 100%;
+}
+
+@media (max-width: 1365px) {
+  .s-catalog__tab-head {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 991px) {
+  .s-catalog__head {
+    align-items: start;
+  }
+
+  .s-catalog__nav {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 15px;
+  }
+
+  .s-catalog__tab-head {
+    margin-bottom: 30px;
+  }
+
+  .s-catalog__toggle {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 0 15px 10px 15px;
+    margin: 15px -15px 0 -15px;
+  }
+
+  .s-catalog__toggle-btn {
+    gap: 16px;
+  }
+
+  .s-catalog__toggle-btn._active::before {
+    right: 16px;
+  }
+
+  .s-catalog__slider {
+    overflow: visible !important;
+  }
+
+  .s-catalog__slider .swiper-slide {
+    width: 400px !important;
+    max-width: 100%;
+  }
+}
+
+@media (any-hover: hover) and (max-width: 991px) {
+  .s-catalog__toggle-btn:hover::before {
+    right: 16px;
+  }
+}
+
+@media (hover: none) and (max-width: 991px) {
+  .s-catalog__toggle-btn:active::before {
+    right: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .s-catalog__nav {
+    width: 100%;
+    align-items: start;
+  }
+
+  .s-catalog__nav-wrap {
+    flex-wrap: wrap;
+  }
+
+  .s-catalog__toggle {
+    padding: 0 10px 10px 10px;
+    margin: 15px -10px 0 -10px;
+  }
+}
+
+@media (any-hover: hover) {
+  .s-catalog__nav-btn:hover {
+    background-color: var(--background-h);
+    color: var(--color-h);
+    border-color: var(--border-h);
+  }
+
+  .s-catalog__nav-btn:hover .logo-dark {
+    display: none;
+  }
+
+  .s-catalog__nav-btn:hover .logo-white {
+    display: block;
+  }
+
+  .s-catalog__toggle-btn:hover::before {
+    right: 20px;
+  }
+}
+
+@media (hover: none) {
+  .s-catalog__nav-btn:active {
+    background-color: var(--background-h);
+    color: var(--color-h);
+    border-color: var(--border-h);
+  }
+
+  .s-catalog__nav-btn:active .logo-dark {
+    display: none;
+  }
+
+  .s-catalog__nav-btn:active .logo-white {
+    display: block;
+  }
+
+  .s-catalog__toggle-btn:active::before {
+    right: 20px;
+  }
+}

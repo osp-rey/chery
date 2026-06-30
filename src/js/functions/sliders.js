@@ -65,13 +65,51 @@ export default function sliders() {
       },
       scrollbar: {
         draggable: true,
-        el: ".s-promo .slider-scrollbar"
+        el: ".s-promo .slider-scrollbar",
       },
       breakpoints: {
         768: {
-          spaceBetween: 30
-        }
-      }
+          spaceBetween: 30,
+        },
+      },
+    });
+  }
+
+  const aboutSlider = document.querySelector(".s-about__slider");
+
+  if (aboutSlider) {
+    const thumbAboutSldier = document.querySelector(".s-about__thumb-slider");
+
+    const thumbSwiper = new Swiper(thumbAboutSldier, {
+      speed: 900,
+      slidesPerView: "auto",
+      spaceBetween: 10,
+      breakpoints: {
+        1200: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
+        576: {
+          slidesPerView: 3,
+          spaceBetween: 15,
+        },
+      },
+    });
+
+    const swiper = new Swiper(aboutSlider, {
+      speed: 900,
+      spaceBetween: 15,
+      slidesPerView: 1,
+      autoplay: {
+        delay: 6500,
+      },
+      thumbs: {
+        swiper: thumbSwiper,
+      },
+      scrollbar: {
+        el: ".s-about .slider-scrollbar",
+        draggable: true,
+      },
     });
   }
 }

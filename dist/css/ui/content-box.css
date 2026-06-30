@@ -1,0 +1,51 @@
+.content-box > * {
+  margin: 0;
+}
+
+.content-box > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.content-box a {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.content-box ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.content-box ul li {
+  position: relative;
+  padding-left: 26px;
+}
+
+.content-box ul li::before {
+  position: absolute;
+  content: "";
+  background-color: currentColor;
+  width: 4px;
+  height: 4px;
+  transform: rotate(45deg);
+  left: 11px;
+  top: 9px;
+}
+
+@media (max-width: 991px) {
+  .content-box ul li::before {
+    top: 7px;
+  }
+}
+
+@media (any-hover: hover) {
+  .content-box a:hover {
+    text-decoration: none;
+  }
+}
+
+@media (hover: none) {
+  .content-box a:active {
+    text-decoration: none;
+  }
+}

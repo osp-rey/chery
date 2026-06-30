@@ -1,0 +1,48 @@
+@use '../base/templates' as *;
+@use '../base/media' as *;
+
+.s-steps {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px;
+    row-gap: 30px;
+    @include laptop {
+      gap: 30px;
+    }
+    @include laptop-middle {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    @include tablet {
+      gap: 20px;
+    }
+    .item-img {
+      display: block;
+      width: 90px;
+      flex-shrink: 0;
+      @include tablet {
+        width: 80px;
+      }
+    }
+    .item-title {
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 160%;
+      @include tablet {
+        font-size: 26px;
+      }
+    }
+    .item-content {
+      color: var(--gray);
+      margin-top: 25px;
+      @include tablet {
+        margin-top: 15px;
+      }
+    }
+  }
+}

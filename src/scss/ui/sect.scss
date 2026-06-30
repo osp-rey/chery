@@ -1,5 +1,5 @@
-@use '../base/templates' as *;
-@use '../base/media' as *;
+@use "../base/templates" as *;
+@use "../base/media" as *;
 
 .sect-m {
   margin: 90px 0px;
@@ -20,6 +20,10 @@
   }
   @include laptop-min {
     padding: 60px 0px;
+  }
+
+  &.bg-ghost + .sect-p.bg-ghost {
+    padding-top: 0 !important;
   }
 }
 

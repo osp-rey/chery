@@ -11,9 +11,31 @@
 
   a {
     color: var(--primary);
-
+    text-decoration: underline;
     @include hover {
-      text-decoration: underline;
+      text-decoration: none;
+    }
+  }
+  ul {
+    padding-left: 0;
+    list-style: none;
+
+    li {
+      position: relative;
+      padding-left: 26px;
+      &::before {
+        position: absolute;
+        content: "";
+        background-color: currentColor;
+        width: 4px;
+        height: 4px;
+        transform: rotate(45deg);
+        left: 11px;
+        top: 9px;
+        @include laptop-min {
+          top: 7px;
+        }
+      }
     }
   }
 }

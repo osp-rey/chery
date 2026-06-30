@@ -1,0 +1,134 @@
+.burger-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 110;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.burger-overlay._active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.burger {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+  padding: 20px;
+  width: 350px;
+  max-width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  z-index: 120;
+  transform: translateX(-100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
+}
+
+.burger._open {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.burger__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+.burger__logo {
+  display: block;
+  width: 230px;
+}
+
+.burger__logo img {
+  display: block;
+  width: 100%;
+}
+
+.burger__close {
+  width: 25px;
+  height: 25px;
+  flex-shrink: 0;
+  transition: color 0.3s ease;
+}
+
+.burger__close svg {
+  width: 100%;
+  height: 100%;
+}
+
+.burger__list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.burger__list a {
+  transition: color 0.3s ease;
+}
+
+.burger__contacts {
+  margin-top: auto;
+}
+
+.burger__tel {
+  font-size: 20px;
+  color: var(--primary);
+  transition: color 0.3s ease;
+}
+
+.burger__address {
+  margin-top: 5px;
+}
+
+@media (min-width: 992px) {
+  .burger-overlay {
+    display: none !important;
+  }
+
+  .burger {
+    display: none !important;
+  }
+}
+
+@media (any-hover: hover) {
+  .burger__close:hover {
+    color: var(--primary);
+  }
+
+  .burger__list a:hover {
+    color: var(--primary);
+  }
+
+  .burger__tel:hover {
+    color: var(--black);
+  }
+}
+
+@media (hover: none) {
+  .burger__close:active {
+    color: var(--primary);
+  }
+
+  .burger__list a:active {
+    color: var(--primary);
+  }
+
+  .burger__tel:active {
+    color: var(--black);
+  }
+}

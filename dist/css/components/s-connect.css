@@ -1,0 +1,66 @@
+.s-connect {
+  position: relative;
+  color: white;
+  z-index: 1;
+}
+
+.s-connect::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0) 27.93%, rgba(26, 26, 26, 0.6) 41.09%, rgba(27, 27, 27, 0.8) 49.98%, rgba(27, 27, 27, 0.8) 60.24%, rgba(38, 38, 38, 0.8) 100%);
+  z-index: -1;
+}
+
+.s-connect__info {
+  max-width: 750px;
+}
+
+.s-connect__content {
+  margin-top: 30px;
+  max-width: 600px;
+}
+
+.s-connect__form {
+  margin-top: 60px;
+}
+
+.s-connect__form .form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.s-connect__form .form-grid .btn-s[type=submit],
+.s-connect__form .form-grid .form-check {
+  width: 100%;
+  grid-column: 2 span;
+}
+
+@media (max-width: 1199px) {
+  .s-connect__form {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 991px) {
+  .s-connect::before {
+    background: rgba(26, 26, 26, 0.6);
+  }
+
+  .s-connect__form {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .s-connect__form .form-grid {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 575px) {
+  .s-connect__form .form-grid .input-control {
+    grid-column: 2 span;
+  }
+}

@@ -1,0 +1,105 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.s-methods {
+  position: relative;
+  z-index: 1;
+  &::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background: linear-gradient(
+      270deg,
+      rgba(255, 255, 255, 0) 34.64%,
+      rgba(255, 255, 255, 0.64) 50.59%,
+      rgba(255, 255, 255, 0.82) 62.57%,
+      rgba(255, 255, 255, 0.95) 78.17%,
+      #fff 92.2%
+    );
+    z-index: -1;
+
+    @include laptop-min {
+      background: linear-gradient(
+        270deg,
+        rgba(255, 255, 255, 0.5) 0%,
+        rgba(255, 255, 255, 0.64) 50.59%,
+        rgba(255, 255, 255, 0.82) 62.57%,
+        rgba(255, 255, 255, 0.95) 78.17%,
+        #fff 92.2%
+      );
+    }
+  }
+  &__info {
+    max-width: 750px;
+  }
+  &__title {
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+    max-width: 730px;
+    @include tablet {
+      gap: 20px;
+    }
+    @include tablet-min {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__item {
+    border: 1px solid var(--dark);
+    padding: 30px;
+    backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, 0.35);
+
+    @include laptop-min {
+      padding: 25px;
+    }
+    @include tablet {
+      padding: 20px;
+    }
+
+    .item-head {
+      @include flex-between;
+      gap: 20px;
+    }
+    .item-num {
+      font-size: 70px;
+      letter-spacing: 0.01em;
+      text-transform: uppercase;
+      color: var(--primary);
+      @include laptop-min {
+        font-size: 60px;
+      }
+      @include tablet {
+        font-size: 50px;
+      }
+    }
+    .item-icon {
+      display: block;
+      width: 90px;
+      flex-shrink: 0;
+      @include laptop-min {
+        width: 80px;
+      }
+      @include tablet {
+        width: 70px;
+      }
+    }
+    .item-title {
+      font-size: 32px;
+      line-height: 150%;
+      letter-spacing: 0.03em;
+      @include laptop-min {
+        font-size: 28px;
+      }
+      @include tablet {
+        font-size: 26px;
+      }
+    }
+    .item-text {
+      color: var(--gray);
+    }
+  }
+}

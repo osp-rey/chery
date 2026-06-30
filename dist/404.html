@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="./files/favicon.svg" />
+<link rel="stylesheet" href="./files/swiper/swiper.min.css" />
+<link rel="stylesheet" href="./files/fancybox/fancybox.min.css" />
+<link rel="stylesheet" href="./css/main.css?ver=mr0sbxik" />
+<title>OSPREY</title>
+
+</head>
+<body class="body error404">
+
+  <header class="header">
+  <div class="container">
+    <div class="header__wrap">
+      <a href="/" class="header__logo">
+        <img src="img/logo.svg" alt="logo">
+      </a>
+      <nav class="header__nav">
+        <ul class="list header__list">
+          <li><a href="/#s-catalog">Модельный ряд</a></li>
+          <li><a href="/#s-promo">Специальные предложения</a></li>
+          <li><a href="/#s-credit">Оформить кредит</a></li>
+          <li><a href="/#s-offer">Тест-драйв</a></li>
+          <li><a href="/#s-contacts">Как нас найти</a></li>
+        </ul>
+      </nav>
+      <div class="header__contacts">
+        <a href="tel:+78422409863" class="header__tel">+7 (8422) 40-98-63</a>
+        <div class="header__address"> г. Ульяновск Урицкого 37А</div>
+      </div>
+      <div class="header__mob">
+        <a href="tel:+78422409863" class="header__mob-btn">
+          <svg>
+            <use xlink:href='img/icons/icons.svg#icon-tel'></use>
+          </svg>
+        </a>
+        <div class="header__burger-btn" id="burger-open">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+  <aside class="burger-overlay" id="burger-overlay"></aside>
+<aside class="burger" id="burger">
+  <div class="burger__head">
+    <a href="/" class="burger__logo">
+      <img src="img/logo.svg" alt="logo" />
+    </a>
+    <div class="burger__close" id="burger-close">
+      <svg>
+        <use xlink:href="img/icons/icons.svg#icon-close"></use>
+      </svg>
+    </div>
+  </div>
+  <ul class="list burger__list">
+    <li><a href="/#s-catalog">Модельный ряд</a></li>
+    <li><a href="/#s-promo">Специальные предложения</a></li>
+    <li><a href="/#s-credit">Оформить кредит</a></li>
+    <li><a href="/#s-offer">Тест-драйв</a></li>
+    <li><a href="/#s-contacts">Как нас найти</a></li>
+  </ul>
+  <div class="burger__contacts">
+    <a href="tel:+78422409863" class="burger__tel">+7 (8422) 40-98-63</a>
+    <div class="burger__address">г. Ульяновск Урицкого 37А</div>
+  </div>
+</aside>
+
+  <aside>
+  <div class="modal" id="modal-feedback">
+    <div data-fancybox-close class="modal__close">
+      <svg>
+        <use xlink:href='img/icons/icons.svg#icon-close'></use>
+      </svg>
+    </div>
+    <div class="modal__body">
+      <div class="modal__title l-title" data-text="Связаться с нами">
+        Связаться с нами
+      </div>
+      <p class="modal__content">
+        Оставьте заявку и мы свяжемся с Вами в ближайшее время.
+      </p>
+      <form action="#" class="modal__form">
+        <div class="form-grid">
+          <div style="display: none;">
+            <input type="text" class="input-note">
+          </div>
+          <div class="input-control">
+            <input type="text" placeholder="Имя" class="input" />
+          </div>
+          <div class="input-control">
+            <input type="tel" placeholder="Телефон" class="input" />
+          </div>
+          <button type="submit" class="btn-s">Оставить заявку</button>
+          <div class="form-check">
+            <div class="check-wrapper">
+              <span class="wpcf7-form-control-wrap">
+                <span class="wpcf7-form-control wpcf7-acceptance">
+                  <span class="wpcf7-list-item">
+                    <label>
+                      <input type="checkbox" name="acceptance-469" />
+                      <span class="wpcf7-list-item-label">
+                        <span>
+                          Я даю согласие на
+                          <a href="/personal-data" target="_blank">
+                            Обработку персональных данных
+                          </a>
+                        </span>
+                      </span>
+                    </label>
+                  </span>
+                </span>
+              </span>
+            </div>
+            <div class="check-wrapper">
+              <span class="wpcf7-form-control-wrap">
+                <span class="wpcf7-form-control wpcf7-acceptance">
+                  <span class="wpcf7-list-item">
+                    <label>
+                      <input type="checkbox" name="acceptance-469" />
+                      <span class="wpcf7-list-item-label">
+                        <span>
+                          Соглашаюсь на
+                          <a href="/advertisement-policy" target="_blank">
+                            Получение информационно-рекламной рассылки
+                          </a>
+                        </span>
+                      </span>
+                    </label>
+                  </span>
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</aside>
+
+  
+  <main>
+   <section class="s-notfound sect-m">
+      <div class="container">
+        <div class="s-notfound__num">404</div>
+        <div class="s-notfound__descr content">
+          Страницы по Вашему запросу не существует.
+        </div>
+        <a href="/" class="btn-s s-notfound__btn">На главную</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+  <div class="container">
+    <div class="footer__wrapper">
+      <div class="footer__main">
+        <a href="/" class="footer__logo">
+          <img src="img/logo-white.png" alt="logo" />
+        </a>
+        <p class="footer__main-content">
+          Все права защищены. Копирование материалов строго по согласию
+          администрации сайта.
+        </p>
+      </div>
+      <ul class="list footer__list">
+        <li><a href="/#s-catalog">Модельный ряд</a></li>
+        <li><a href="/#-promo">Специальные предложения</a></li>
+        <li><a href="/#-credit">Оформить кредит</a></li>
+        <li><a href="/#s-offer">Тест-драйв</a></li>
+        <li><a href="/#s-tradein">Трейд-ИН</a></li>
+        <li><a href="/#s-contacts">Как нас найти</a></li>
+      </ul>
+      <div class="footer__contacts">
+        <div class="footer__address">Ульяновск Урицкого 37А</div>
+        <a href="tel:+78422409863" class="footer__tel">+7 (8422) 40-98-63</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="footer__copyright">© 2026 АВТОСЕТЬ РФ. ООО «АРМ-2»</div>
+      <div class="footer__bottom-info">ИНН: 000000000000</div>
+      <ul class="list footer__bottom-list">
+        <li><a href="#" target="_blank">Политика конфиденциальности</a></li>
+        <li>
+          <a href="#" target="_blank">Политика обработки персональных данных</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script src="./files/swiper/swiper.min.js"></script>
+<script src="./files/fancybox/fancybox.min.js"></script>
+<script src="./files/inputmask/inputmask.min.js"></script>
+
+  
+  <script src="./js/app.js?ver=mr0sbxik"></script>
+</body>
+</html>

@@ -50,6 +50,9 @@
       display: grid;
       grid-template-columns: 1fr;
       gap: 20px;
+      @include tablet {
+        gap: 16px;
+      }
     }
     .btn-s[type="submit"] {
       width: 100%;
