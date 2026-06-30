@@ -528,7 +528,7 @@ img {
   list-style: none;
 }
 
-.m-title {
+.b-title {
   font-weight: 400;
   font-size: 50px;
   line-height: 96%;
@@ -2366,7 +2366,7 @@ img {
 }
 
 @media (max-width: 1365px) {
-  .m-title {
+  .b-title {
     font-size: 42px;
   }
 
@@ -2645,7 +2645,7 @@ img {
     font-size: 16px;
   }
 
-  .m-title {
+  .b-title {
     font-size: 38px;
   }
 
@@ -2924,7 +2924,7 @@ img {
     padding: 0 10px;
   }
 
-  .m-title {
+  .b-title {
     font-size: 36px;
   }
 
@@ -3100,6 +3100,10 @@ img {
 
   .s-offer__form .form-grid .input-control {
     grid-column: 2 span;
+  }
+
+  .s-steps__item .item-img {
+    width: 60px;
   }
 
   .s-credit__info-banks {

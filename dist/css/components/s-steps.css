@@ -57,3 +57,9 @@
     margin-top: 15px;
   }
 }
+
+@media (max-width: 575px) {
+  .s-steps__item .item-img {
+    width: 60px;
+  }
+}

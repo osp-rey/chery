@@ -28,6 +28,9 @@
       @include tablet {
         width: 80px;
       }
+      @include tablet-min {
+        width: 60px;
+      }
     }
     .item-title {
       font-weight: 400;
