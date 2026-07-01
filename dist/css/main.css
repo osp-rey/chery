@@ -471,7 +471,7 @@ img {
 
 .btn-s {
   --background: var(--black);
-  --border: var(--primary);
+  --border: var(--black);
   --color: white;
   --background-h: var(--primary);
   --border-h: var(--primary);
