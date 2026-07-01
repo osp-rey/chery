@@ -11,7 +11,7 @@ export default function sliders() {
       );
     }
 
-    if (window.matchMedia("min-width: 576px").matches) {
+    if (window.matchMedia("(min-width: 576px)").matches) {
       updateHeightSlider();
     }
 

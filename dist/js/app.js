@@ -588,7 +588,7 @@
                 const headerHeight = document.querySelector(".header").clientHeight;
                 slides.forEach(slide => slide.style.minHeight = `${window.innerHeight - headerHeight}px`);
             }
-            if (window.matchMedia("min-width: 576px").matches) {
+            if (window.matchMedia("(min-width: 576px)").matches) {
                 updateHeightSlider();
             }
             const swiper = new Swiper(introSlider, {
