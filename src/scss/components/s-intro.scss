@@ -17,6 +17,7 @@
     box-sizing: border-box;
     z-index: 1;
     min-height: 100%;
+    min-height: 740px;
     height: auto !important;
     &::before {
       position: absolute;
@@ -38,6 +39,9 @@
 
     @include desktop {
       padding: 100px 0px;
+    }
+    @include laptop-middle {
+      min-height: 600px;
     }
     @include laptop-min {
       padding: 90px 0px;

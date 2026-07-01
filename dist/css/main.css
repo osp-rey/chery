@@ -1260,6 +1260,7 @@ img {
   box-sizing: border-box;
   z-index: 1;
   min-height: 100%;
+  min-height: 740px;
   height: auto !important;
 }
 
@@ -2537,6 +2538,10 @@ img {
 
   .header__contacts {
     display: none;
+  }
+
+  .s-intro__slide {
+    min-height: 600px;
   }
 
   .s-adv__wrap {

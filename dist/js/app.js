@@ -583,14 +583,6 @@
     function sliders() {
         const introSlider = document.querySelector(".s-intro__slider");
         if (introSlider) {
-            const slides = introSlider.querySelectorAll(".swiper-slide");
-            function updateHeightSlider() {
-                const headerHeight = document.querySelector(".header").clientHeight;
-                slides.forEach(slide => slide.style.minHeight = `${window.innerHeight - headerHeight}px`);
-            }
-            if (window.matchMedia("(min-width: 576px)").matches) {
-                updateHeightSlider();
-            }
             const swiper = new Swiper(introSlider, {
                 speed: 900,
                 autoplay: {
