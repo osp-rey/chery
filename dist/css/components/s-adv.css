@@ -63,9 +63,18 @@
   }
 }
 
+@media (max-width: 575px) {
+  .s-adv__item .item-name {
+    font-size: 28px;
+  }
+}
+
 @media (max-width: 480px) {
   .s-adv__wrap {
-    grid-template-columns: 1fr;
     gap: 20px;
+  }
+
+  .s-adv__item .item-name {
+    font-size: 24px;
   }
 }

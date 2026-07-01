@@ -54,7 +54,11 @@
 @media (max-width: 991px) {
   .s-offer__wrapper {
     flex-direction: column-reverse;
-    padding-top: 60px;
+    padding: 60px 0px;
+  }
+
+  .s-offer__img {
+    display: none;
   }
 
   .s-offer__info {

@@ -6,6 +6,7 @@ import handlerSelect from "./functions/handlerSelect.js";
 import inputmask from "./functions/inputmask.js";
 import map from "./functions/map.js";
 import mediaAdaptive from "./functions/mediaAdaptive.js";
+import reviews from "./functions/reviews.js";
 import sliders from "./functions/sliders.js";
 import spoller from "./functions/spoller.js";
 import tab from "./functions/tab.js";
@@ -22,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
   carChange();
   spoller();
   mediaAdaptive();
+  reviews();
 
   Fancybox.bind("[data-fancybox]", {
     closeButton: false,

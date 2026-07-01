@@ -62,3 +62,9 @@
     padding: 60px 0px;
   }
 }
+
+@media (max-width: 575px) {
+  .s-intro__slide {
+    min-height: 500px;
+  }
+}

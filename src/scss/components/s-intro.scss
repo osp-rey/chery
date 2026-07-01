@@ -45,6 +45,9 @@
     @include tablet {
       padding: 60px 0px;
     }
+    @include tablet-min {
+      min-height: 500px;
+    }
   }
   &__slide-inside {
     max-width: 935px;

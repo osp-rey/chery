@@ -2749,7 +2749,11 @@ img {
 
   .s-offer__wrapper {
     flex-direction: column-reverse;
-    padding-top: 60px;
+    padding: 60px 0px;
+  }
+
+  .s-offer__img {
+    display: none;
   }
 
   .s-offer__info {
@@ -3094,6 +3098,14 @@ img {
 }
 
 @media (max-width: 575px) {
+  .s-intro__slide {
+    min-height: 500px;
+  }
+
+  .s-adv__item .item-name {
+    font-size: 28px;
+  }
+
   .s-promo__slider .swiper-slide {
     width: 380px !important;
   }
@@ -3192,8 +3204,11 @@ img {
 
 @media (max-width: 480px) {
   .s-adv__wrap {
-    grid-template-columns: 1fr;
     gap: 20px;
+  }
+
+  .s-adv__item .item-name {
+    font-size: 24px;
   }
 }
 

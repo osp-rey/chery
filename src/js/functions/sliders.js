@@ -10,7 +10,10 @@ export default function sliders() {
           (slide.style.minHeight = `${window.innerHeight - headerHeight}px`),
       );
     }
-    updateHeightSlider();
+
+    if (window.matchMedia("min-width: 576px").matches) {
+      updateHeightSlider();
+    }
 
     const swiper = new Swiper(introSlider, {
       speed: 900,

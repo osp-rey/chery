@@ -11,7 +11,7 @@
     }
     @include laptop-min {
       flex-direction: column-reverse;
-      padding-top: 60px;
+      padding: 60px 0px;
     }
   }
   &__img {
@@ -23,6 +23,9 @@
     }
     @include laptop-middle {
       width: 480px;
+    }
+    @include laptop-min {
+      display: none;
     }
   }
   &__info {
